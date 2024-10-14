@@ -1,0 +1,160 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint"
+  content= "width=device-scale=1.0">
+<link rel="stylesheet"href="styles.css">
+<title>KP Academy</title>
+</head>
+<body>
+   <header>
+    <div clas="container">
+<h1>KP Academy</h1>
+<nav>
+<ul>
+<li><a href="#home">Home</a><li>
+<li><a href="#courses">Courses</a><li>
+<li><a href="#about">About</a><li>
+<li><a href="#contact">Contact Us</a><li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section id="home" class="hero">
+<img src = "hero.jpg"alt=KP Academy Hero">
+<div class="hero-text">
+<h3>Welcome to KP Academy</h3>
+<p>Your gateway for mastering IT skills!!</p>
+</div>
+</section>
+
+<center>
+<section id="featured Courses">
+<h3>Featured Courses</h3>
+ <article class="row2">
+ <article>
+<div class="course-card">
+<h4>Python Courses</h4>
+<img src="python.jpg"alt="Python Programming Course">
+<p>Learn the fundamentals Of Python Programming </p>
+</div>
+ 
+<div class="course-card">
+<h4>Cybersecurity</h4>
+<img src= "cybersecurity.jpg"alt ="Cybersecurity Courses">
+<p>Understand the principle of cybersecurity.</p>
+</div>
+ 
+
+ <div class="course-card">
+<h4>Data Analysis</h4>
+<img src= "dataAnalysis.jpg"alt ="Data Analysis Courses">
+<p>Master data analysis and visualization techniques.</p>
+</div>
+</section>
+
+
+<section id ="courses">
+<h3>All courses</h3>
+<select id="course-filter">
+<option value="all">All categories</option>
+  <option value="programming">Programming</option>
+  <option value="networking">Networking</option>
+  <option value="data science">Data Science</option>
+</select>
+
+
+  <div class="course-list">
+  <div class="course-item"data-category="programming">
+  <img src="JavaScript.jpg"alt="JavaScript Programming Course">
+  <h4>JavaScript basics</h4>
+  <p>start your journey into web development with JavaScript.<p>
+</div>
+
+
+<div class="course-list">
+<div class="course-item"data-category="networking">
+<img src="networkSecurity.jpg"alt="networking Programming Course">
+<h4>network security</h4>
+<p>understanding and implementig network security practice.</p>
+</div>
+
+<div class="course-list">
+<div class="course-item"data-category="data science">
+<img src="machineLearning.jpg"alt="machineLearning Programming Course">
+<h4>machine learning</h4>
+<p>dive into world of AI and machine learning algorithms.</p>
+</div>
+</section>
+
+<section id="about">
+  <h3>About Us</h3>      >
+  <p>KP Academy Started with a version to provide IT education. It had been at
+  forefront of IT education since 2010.</p>
+
+   <h3>Our Mission</h3>
+   <p>To equip learners with the skills needed to thrive in the tech industry. It also provide
+    the IT training to empower individuals to excel in their career</p>
+
+    <h3>Our Team</h3>
+    <img src="team.jpg" alt="Our Team">
+    <p>meet our dedicated instructorsand administrative staff.</p>
+
+    <h3>Archievement</h3>
+    <ul>
+    <li>over 10 000 students trained</li>
+    <li>partnership with leading tech companies</li>
+    <li>98% job placement rate for graduates</li>
+    </ul>
+    </div>
+   </section>
+
+<section id ="contact">
+    <h3>Contact Us</h3>
+    <p> if you have any question, feel free to reach out!</p>
+    <h3>contact informaton:</h3>
+    <p>Address: 71A Oesthuizen road, Newlands </p>
+    <p>phone: (011) 675 9087</p>
+    <p>email: info@KPacademy.com</p>
+     </div>
+    </section>
+</center>
+ 
+<form id="contact-form">
+  <input id="name" type="text" placeholder="your name" required>
+  <input id="email" type="text" placeholder="your email" required>
+  <textarea name="message" type="text" placeholder="your message" required></textarea>
+  <button onclick="submit()">submit</button>
+</form>
+</div>
+</section>
+
+<script>
+document.getElementById("course-filter").addEventListener("change",funtion(){
+  const filterValue="this.value;
+  const courseItem=document.querySelectorAll("course-item");
+  
+   courseItems.forEach(item=>{
+    const category= item.getAttribute("data-category");
+     if(filterValue ==="all" || category ===filterValue){
+         item.style.display="block";
+}
+else{
+  item.style.display="none";
+}
+});
+});
+
+document.getElementbyId("contact-form").addEventListener("submit", function(e){
+   e.preventDefault();
+   arlet("thank you for your message! we will get back to you shortly.");
+});
+
+</script>
+<footer>
+<p>2024 KP Academy</P>
+</footer>
+</body>
+</html>
